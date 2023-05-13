@@ -1,0 +1,279 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+
+/* Colour Variables */
+:root {
+--color-background: #1F2937;
+--color-main: #F9FAF8;
+--color-main-light: #E5E7EB;
+--color-secondary: #3882F6;
+}
+
+/*========== base styles ==========*/
+* {
+font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+    "Helvetica Neue", sans-serif;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+text-rendering: optimizeLegibility;
+font-size: inherit;
+}
+
+html {
+font-size: 56.25%;
+}
+
+@media only screen and (min-width: 1200px) {
+html {
+    font-size: 62.5%;
+}
+}
+
+@media only screen and (min-width: 2100px) {
+html {
+    font-size: 75%;
+}
+}
+
+body {
+line-height: 1.6;
+font-weight: 400;
+font-size: 1.5rem;
+color: var(--color-background);
+min-height: 100vh;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+h2 {
+    font-size: 36px;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-main-light);
+}
+
+a:hover {
+    color: var(--color-secondary);
+    transition: 0.2s ease-in-out;
+}
+
+a:not(:hover) {
+    transition: 0.2s;
+}
+
+nav {
+    background-color: var(--color-background);
+    display: flex;
+    padding-left: 25%;
+    padding-right: 25%;
+    padding-top: 20px;
+
+    & h1 {
+        flex: 3;
+    }
+
+    & a:not(:last-child) {
+        margin-right: 3vw;
+    }
+}
+
+.topnav .icon {
+    display: none;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+    transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+    padding: 1rem 2rem;
+    user-select: none;
+    -webkit-user-select: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.15);
+    font-weight: 500;
+    background-color: var(--color-secondary);
+    color: var(--color-main-light);
+}
+
+button:hover, button:focus {
+    opacity: 0.8;
+}
+
+.hero-container {
+    width: 100%;
+    background-color: var(--color-background);
+    color: var(--color-main-light);
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+    padding-left: 25%;
+    padding-right: 25%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & h2 {
+        font-size: 48px;
+        font-weight: bolder;
+        color: var(--color-main);
+        text-align: left;
+    }   
+
+    & img {
+        min-width: 320px;
+        min-height: 213px; 
+        width: 10vw;
+        height: 6vw;
+    }
+}
+
+.benefits-container {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 25%;
+    padding-right: 25%;
+    flex-wrap: wrap;
+}
+
+.benefits-item {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 176px;
+
+    & img {
+        width: 176px;
+        height: 158px;
+        border: 5px solid var(--color-secondary);
+        border-radius: 10px;
+    }
+}
+
+.quote-container {
+    padding-left: 25%;
+    padding-right: 25%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: var(--color-main-light);
+    font-size: 36px;
+    font-style: italic;
+    font-weight: 300;
+}
+
+.sign-up-container {
+    margin-left: 25%;
+    margin-right: 25%;
+    padding: 40px;
+    color: var(--color-main);
+    background-color: var(--color-secondary);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+
+    & button {
+        border: 2px solid var(--color-main);
+    }
+}
+
+footer {
+    background-color: var(--color-background);
+    color: var(--color-main);
+    text-align: center;
+    padding: 40px;
+}
+
+@media only screen and (max-width: 600px) {
+    nav {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .topnav a:not(:first-child) {				/* Only displays the hamburger menu as it is the first child */
+        display: none;
+    }
+
+    .topnav a.icon {					/* Styles the hamburger menu in the second phase of the navigation bar*/
+            display: block;
+            position: absolute;
+            top: 20px;
+            right: 5px;
+            font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 600px) {			/* Media query to activate when reaching above a max-width of 780px*/
+    nav {
+        display: block;
+    }
+
+    .topnav.topnav.responsive a.icon {					/* Styles the hamburger menu in the second phase of the navigation bar*/
+        text-align: end;
+    }
+    
+    .topnav.responsive :not(:first-child) {	
+        margin-top: 5px;
+        display: block;
+        text-align: center;				/* Styles the links of the navigation bar*/
+        width: 100%;  
+    }
+}
+
+@media screen and (max-width: 720px) {			/* Media query to activate when reaching above a max-width of 780px*/
+    .benefits-container {
+        display: block;
+    }
+
+    .benefits-item {
+        display: block;
+        margin: auto;
+    }
+
+    .quote-container {
+        padding-left: 5%;
+        padding-right: 5%;
+        text-align: center;
+        font-size: 24px;
+    }
+
+    .sign-up-container {
+        margin: 5%;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .hero-container {
+        padding-left: 5%;
+        padding-right: 5%;
+        display: block;
+        text-align: center;
+    
+        & img {
+            display: block;
+            margin: auto;
+            margin-top: 5vw;
+        }
+
+        & h2 {
+            font-size: 24px;
+            text-align: center;
+        }
+    }
+
+    .sign-up-container {
+        display: block;
+        text-align: center;
+
+        & button {
+            margin-top: 10px;
+        }
+    }
+}
+
