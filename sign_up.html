@@ -4,21 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="scripts/main.js"></script>
     <link rel="stylesheet" href="styles/main.css">
     <title>Sign Up</title>
 </head>
 <body>
     <main>
-        <nav>
+        <nav class="nav">
             <h1><a href="index.html">Blue Ridge Head Co.</a></h1>
-            <a href="index.html">Product</a>
-            <a href="sign_up.html">Sign Up</a>
-            <a href="contact.html">Contact</a>
+
+            <div class="topnav" id="myTopnav">
+                <a href="javascript:void(0);" class="icon" onclick="ResponsiveMenu()">&#9776;</a>
+                <a href="index.html">Product</a>
+                <a href="sign_up.html">Sign Up</a>
+                <a href="contact.html">Contact</a>
+            </div>
         </nav>
 
         <section>
+            <br>
             <h2>Upcoming products and services by Blue Ridge Head Co.</h2>
-            <div>
+            <br>
+            <div class="upcoming-product-container">
                 <img src="assets/images/product-crop.png">
                 <div>
                     <h3>Blue Ridge Shampoo</h3>
@@ -30,8 +37,8 @@
                     </p>
                 </div>
             </div>
-
-            <div>
+            <br>
+            <div class="upcoming-product-container">
                 <img src="assets/images/product-crop.png">
                 <div>
                     <h3>Blue Ridge Beauty Kit</h3>
@@ -43,8 +50,8 @@
                     </p>
                 </div>
             </div>
-
-            <div>
+            <br>
+            <div class="upcoming-product-container">
                 <img src="assets/images/product-crop.png">
                 <div>
                     <h3>Blue Ridge Pamper Set</h3>
@@ -57,37 +64,34 @@
                 </div>
             </div>
         </section>
-
+        <br>
         <h2>Interested? Sign Up Now!</h2>
-
-        <section id="sign_up">
-            <div>
-                <form action="" method="POST">
-                    <label for="name">Name:</label>
-                    <br>
-                    <input name="name" type="text" placeholder="Enter your name..." required />
-                    <br>
-                    <label for="email">Email:</label>
-                    <br>
-                    <input name="email" type="text" placeholder="Enter your email..." required />
-                    <br>
-                    <label for="contact_number">Contact Number:</label>
-                    <br>
-                    <input name="contact_number" type="tel" placeholder="Enter your contact number..." required/>
-                    <br>
-                    <p>How would you like Blue Ridge Head Co. to contact you about updates and services?</p>
-                    <br>
-                    <input type="checkbox" name="reach_email" />
-                    <label for="reach_email" value="email">Reach me by my email</label>
-                    <br>
-                    <input type="checkbox" name="reach_contact_number" />
-                    <label for="reach_contact_number" value="contact_number">Reach me by my contact number</label>
-                    <br>
-                    <button type="submit">Submit</button>
-                </form>
-            </div>
+        <br>
+        <section class="form_container">
+            <form action="" method="POST">
+                <label for="name">Name:</label>
+                <br>
+                <input name="name" type="text" placeholder="Enter your name..." required />
+                <br><br>
+                <label for="email">Email:</label>
+                <br>
+                <input name="email" type="text" placeholder="Enter your email..." required />
+                <br><br>
+                <label for="contact_number">Contact Number:</label>
+                <br>
+                <input name="contact_number" type="tel" placeholder="Enter your contact number..." required/>
+                <br><br>
+                <p>How would you like Blue Ridge Head Co. to contact you about updates and services?</p>
+                <input type="checkbox" name="reach_email" />
+                <label for="reach_email" value="email">Reach me by my email</label>
+                <br>
+                <input type="checkbox" name="reach_contact_number" />
+                <label for="reach_contact_number" value="contact_number">Reach me by my contact number</label>
+                <br><br>
+                <button type="submit">Submit</button>
+            </form>
         </section>
-
+        <br>
         <footer>
             Copyright &copy; 2023
         </footer>

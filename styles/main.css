@@ -183,6 +183,76 @@ button:hover, button:focus {
     }
 }
 
+.upcoming-product-container {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding-right: 25px;
+    border: 5px solid var(--color-secondary);
+    border-radius: 5px;
+    gap: 25px;
+    align-items: center;
+    background-color: var(--color-background);
+    color: var(--color-main);
+
+    & img {
+        width: 224px;
+        height: 208px;
+    }
+
+    & a {
+        color: var(--color-secondary);
+    }
+
+    & a:hover {
+        text-decoration: underline;
+    }
+
+    & div {
+        height: 208px;
+        overflow: auto;
+        display: flex;
+        flex-direction: column;
+        padding-top: 10px;
+    }
+}
+
+.form_container {
+    margin-left: 25%;
+    margin-right: 25%;
+    background-color: var(--color-background);
+    border: 5px solid var(--color-secondary);
+    color: var(--color-main);
+    padding: 50px;
+
+    & input[type=text], input[type=tel], textarea {
+        width: 100%;
+        padding: 5px;
+        color: var(--color-main);
+        background-color: var(--color-background);
+        border: 2px solid var(--color-secondary);
+    }
+
+    & button {
+        display: block;
+        margin: auto;
+    }
+}
+
+.social-links-container {
+    display: flex;
+    justify-content: space-evenly;
+    padding-left: 25%;
+    padding-right: 25%;
+    flex-wrap: wrap;
+
+    & img {
+        width: 128px;
+        height: 128px;
+    }
+}
+
 footer {
     background-color: var(--color-background);
     color: var(--color-main);
@@ -206,6 +276,20 @@ footer {
             top: 20px;
             right: 5px;
             font-size: 24px;
+    }
+
+    .upcoming-product-container {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .form_container {
+        margin-left: 5%;
+        margin-right: 5%;
     }
 }
 
@@ -273,6 +357,22 @@ footer {
 
         & button {
             margin-top: 10px;
+        }
+    }
+
+    .upcoming-product-container {
+        display: block;
+        text-align: center;
+        padding: 25px;
+        height: fit-content;
+
+        & img {
+            display: block;
+            margin: auto;
+        }
+
+        & div {
+            height: auto;
         }
     }
 }
