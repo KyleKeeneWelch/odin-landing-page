@@ -1,3 +1,4 @@
+<?php require("scripts/sign_up_script.php") ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,8 +17,8 @@
             <div class="topnav" id="myTopnav">
                 <a href="javascript:void(0);" class="icon" onclick="ResponsiveMenu()">&#9776;</a>
                 <a href="index.html">Product</a>
-                <a href="sign_up.html">Sign Up</a>
-                <a href="contact.html">Contact</a>
+                <a href="sign_up_page.php">Sign Up</a>
+                <a href="contact_page.php">Contact</a>
             </div>
         </nav>
 
@@ -68,25 +69,29 @@
         <h2>Interested? Sign Up Now!</h2>
         <br>
         <section class="form_container">
-            <form action="" method="POST">
+            <form action="" method="POST" id="sign_up">
+                <span style="color: red; display: block;"><?php echo $nameErr;?></span>
                 <label for="name">Name:</label>
                 <br>
-                <input name="name" type="text" placeholder="Enter your name..." required />
+                <input name="name" type="text" placeholder="Enter your name..." value="<?php echo $name ?>">
                 <br><br>
+                <span style="color: red; display: block;"><?php echo $emailErr;?></span>
                 <label for="email">Email:</label>
                 <br>
-                <input name="email" type="text" placeholder="Enter your email..." required />
+                <input name="email" type="text" placeholder="Enter your email..." value="<?php echo $email ?>">
                 <br><br>
+                <span style="color: red; display: block;"><?php echo $contact_numberErr;?></span>
                 <label for="contact_number">Contact Number:</label>
                 <br>
-                <input name="contact_number" type="tel" placeholder="Enter your contact number..." required/>
+                <input name="contact_number" type="tel" placeholder="Enter your contact number..." value="<?php echo $contact_number ?>">
                 <br><br>
+                <span style="color: red; display: block;"><?php echo $contact_methodErr;?></span>
                 <p>How would you like Blue Ridge Head Co. to contact you about updates and services?</p>
-                <input type="checkbox" name="reach_email" />
-                <label for="reach_email" value="email">Reach me by my email</label>
+                <input type="checkbox" name="contact_method[]" value="email" <?=(in_array("email", $contact_method) ? "checked='checked'" : '') ?> />
+                <label for="contact_method[]">Reach me by my email</label>
                 <br>
-                <input type="checkbox" name="reach_contact_number" />
-                <label for="reach_contact_number" value="contact_number">Reach me by my contact number</label>
+                <input type="checkbox" name="contact_method[]" value="contact_number" <?=(in_array("contact_number", $contact_method) ? "checked='checked'" : '') ?> />
+                <label for="contact_method[]">Reach me by my contact number</label>
                 <br><br>
                 <button type="submit">Submit</button>
             </form>

@@ -1,3 +1,4 @@
+<?php require("scripts/contact_script.php") ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,8 +17,8 @@
             <div class="topnav" id="myTopnav">
                 <a href="javascript:void(0);" class="icon" onclick="ResponsiveMenu()">&#9776;</a>
                 <a href="index.html">Product</a>
-                <a href="sign_up.html">Sign Up</a>
-                <a href="contact.html">Contact</a>
+                <a href="sign_up_page.php">Sign Up</a>
+                <a href="contact_page.php">Contact</a>
             </div>
         </nav>
         <br>
@@ -25,17 +26,20 @@
         <br>
         <section class="form_container">
             <form action="" method="POST">
+                <span style="color: red; display: block;"><?php echo $nameErr;?></span>
                 <label for="name">Name:</label>
                 <br>
-                <input name="name" type="text" placeholder="Enter your name..." required />
+                <input name="name" type="text" placeholder="Enter your name..." value="<?php echo $name ?>" />
                 <br><br>
+                <span style="color: red; display: block;"><?php echo $emailErr;?></span>
                 <label for="email">Email:</label>
                 <br>
-                <input name="email" type="text" placeholder="Enter your email..." required />
+                <input name="email" type="text" placeholder="Enter your email..." value="<?php echo $email ?>" />
                 <br><br>
+                <span style="color: red; display: block;"><?php echo $messageErr;?></span>
                 <label for="message">Message:</label>
                 <br>
-                <textarea rows="5" cols="50" placeholder="Enter your message..." required></textarea>
+                <textarea name="message" rows="5" cols="50" placeholder="Enter your message..."><?php echo $message ?></textarea>
                 <br><br>
                 <button type="submit">Submit</button>
             </form>
