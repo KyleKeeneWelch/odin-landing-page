@@ -108,6 +108,37 @@ button:hover, button:focus {
     opacity: 0.8;
 }
 
+.form_container {
+    margin-left: 25%;
+    margin-right: 25%;
+    background-color: var(--color-background);
+    border: 5px solid var(--color-secondary);
+    color: var(--color-main);
+    padding: 50px;
+
+    & input[type=text], input[type=tel], textarea {
+        width: 100%;
+        padding: 5px;
+        color: var(--color-main);
+        background-color: var(--color-background);
+        border: 2px solid var(--color-secondary);
+    }
+
+    & button {
+        display: block;
+        margin: auto;
+    }
+}
+
+footer {
+    background-color: var(--color-background);
+    color: var(--color-main);
+    text-align: center;
+    padding: 40px;
+}
+
+/*========== index.html styles ==========*/
+
 .hero-container {
     width: 100%;
     background-color: var(--color-background);
@@ -183,6 +214,8 @@ button:hover, button:focus {
     }
 }
 
+/*========== sign_up_page styles ==========*/
+
 .upcoming-product-container {
     display: flex;
     justify-content: space-between;
@@ -218,27 +251,7 @@ button:hover, button:focus {
     }
 }
 
-.form_container {
-    margin-left: 25%;
-    margin-right: 25%;
-    background-color: var(--color-background);
-    border: 5px solid var(--color-secondary);
-    color: var(--color-main);
-    padding: 50px;
-
-    & input[type=text], input[type=tel], textarea {
-        width: 100%;
-        padding: 5px;
-        color: var(--color-main);
-        background-color: var(--color-background);
-        border: 2px solid var(--color-secondary);
-    }
-
-    & button {
-        display: block;
-        margin: auto;
-    }
-}
+/*========== contact_page styles ==========*/
 
 .social-links-container {
     display: flex;
@@ -253,12 +266,7 @@ button:hover, button:focus {
     }
 }
 
-footer {
-    background-color: var(--color-background);
-    color: var(--color-main);
-    text-align: center;
-    padding: 40px;
-}
+/*========== Media Queries ==========*/
 
 @media only screen and (max-width: 600px) {
     nav {

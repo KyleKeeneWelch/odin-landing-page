@@ -14,6 +14,7 @@
         <nav class="nav">
             <h1><a href="index.html">Blue Ridge Head Co.</a></h1>
 
+            <!-- Navigation with burger menu. -->
             <div class="topnav" id="myTopnav">
                 <a href="javascript:void(0);" class="icon" onclick="ResponsiveMenu()">&#9776;</a>
                 <a href="index.html">Product</a>
@@ -25,10 +26,13 @@
         <h2>Leave Us a Message</h2>
         <br>
         <section class="form_container">
+            <!-- Send to same address. Require links PHP variables of script to page. -->
             <form action="" method="POST">
+                <!-- Display error message. -->
                 <span style="color: red; display: block;"><?php echo $nameErr;?></span>
                 <label for="name">Name:</label>
                 <br>
+                <!-- Value attribute provides previously entered value. -->
                 <input name="name" type="text" placeholder="Enter your name..." value="<?php echo $name ?>" />
                 <br><br>
                 <span style="color: red; display: block;"><?php echo $emailErr;?></span>
